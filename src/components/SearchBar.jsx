@@ -13,7 +13,7 @@ const SearchBar = () => {
     return (
         <form onSubmit={handleSubmit}>
             <input type="text" onChange={(e) => setName(e.target.value)}  value={name} className="search-inp"/>
-            <button disabled={isLoading} className="search-btn"><img className="search-img" src="src/assets/search.svg" alt="search" /></button>
+            <button disabled={isLoading} className="search-btn">🔎</button>
             {error && <div>{error}</div>}
         </form>
     )

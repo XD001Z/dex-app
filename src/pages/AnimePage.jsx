@@ -63,7 +63,6 @@ const AnimePage = () => {
         },
       });
       setAnime(updatedAnime.data);
-      window.location.reload(false);
     } catch (error) {
       console.log(error);
     }
