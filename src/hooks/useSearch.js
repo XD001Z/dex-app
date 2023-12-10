@@ -12,7 +12,7 @@ export const useSearch = () => {
         setIsLoading(true);
         setError(null);
 
-        axios.post(API_URL + "/anime/find-one", {name}, {
+        axios.post(API_URL + "anime/find-one", {name}, {
             headers: {
                 "Authorization": `Bearer ${user.authToken}`
             }
@@ -28,7 +28,7 @@ export const useSearch = () => {
         .catch((error) => {
             console.log(error);
             setIsLoading(false);
-            setError(error.response.data.message);
+            setError(error.data.message);
         });
     };
     return { search, isLoading, error };
