@@ -28,7 +28,7 @@ export const useSearch = () => {
         .catch((error) => {
             console.log(error);
             setIsLoading(false);
-            setError(error.data.message);
+            setError(error.response.data.message);
         });
     };
     return { search, isLoading, error };
